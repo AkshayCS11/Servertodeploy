@@ -17,6 +17,10 @@ app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 app.use("/add", empRouter);
 
+app.get('/', (req, res) => {
+  res.send('APP IS RUNNING');
+})
+
 const CONNECTION_URL = 'mongodb+srv://adminakshay:G7TIQXH3tTNx4bMW@cluster0.sdvxgsh.mongodb.net/appdata?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 10000;
 
